@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background: rgb(9,9,9);
+  background: linear-gradient(90deg, var(--tertCol) 0%, var(--secCol) 100%);
+  color:var(--lite);
+}
+:root{
+  --mainNue: rgb(33, 31, 31);
+  --primCol: rgb(255, 250, 118);
+  --secCol: rgb(0, 166, 127);
+  --tertCol: rgb(255, 233, 33);
+  --lite: white;
+}
+#searchContainer{
+  text-align: center;
+  background-color: var(--mainNue)!important;
+  padding:0% 0% 3% 0% ;
+  Margin: 2% 20% 1% 20% ;
+  border-radius: 5px;
+
+}
+#Header{
+  color: var(--lite);
+  text-align: center;
+  Margin-top:2%;
+  font-family: 'Cairo', sans-serif;
+  letter-spacing: .05em;
+}
+
+.formLegend{
+  font-size: 300%;
+  padding:1%;
+  font-family: 'Cairo', sans-serif;
+  color: var(--primCol);
+}
+.orgInput{
+  height: 30px;
+}
+#search{
+  font-size: 200%;
+  overflow: hidden;
+  margin: .5%;
+  background-color:var(--primCol);
+  border-radius: 30px;
+  transform: translate(0px, 5px);
+}
+#search:hover{
+color:var(--lite);
+background-color: var(--secCol)
+}
+
+#resultsContainer{
+  margin: 0% 20%;
+}
+
+#repoList, li{
+  list-style: none;
+  text-align: center;
+  background-color: var(--mainNue);
+  border: .5px solid var(--tertCol);
+  border-radius: 25px;
+  margin-bottom: 1%;
+  padding: 2%;
+}
+#repoList li:hover{
+  background-color: var(--primCol);
+  color:var(--mainNue)
+
+}
+#footer, #footer a {
+  text-decoration: none;
+  text-align: center;
+  margin: 2%;
+  color: var(--primCol);
+}
+#footer a:hover{
+  color:var(--mainNue);
+}
+
+ @media screen and (max-width:768px){
+  #suggested{
+    display: grid;
+    grid-template-columns: 1fr;
+    Margin: 0% 20%;}
+
+ }
