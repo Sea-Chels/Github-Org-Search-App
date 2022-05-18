@@ -1,5 +1,5 @@
 import React from 'react'
-import Results from './Results'
+// import Results from './Results'
 const ResultsSection = () => {
   return (    
     <div id="resultsContainer">

@@ -1,5 +1,5 @@
 {
-  "name": "00-myapp",
+  "name": "git-org-search",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
