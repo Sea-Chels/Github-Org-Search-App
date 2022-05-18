@@ -12,13 +12,24 @@ import RepoPage from './Components/RepoPage'
 
 function App() {
 
+  const eventPrevent = (event) =>{
+    event.preventDefault();
+  }
+  const onClick = (event, text) => {
+    eventPrevent(event);
+    // console.log(`${text}`)
+  }
+  const onSearch =(text)=> {
+    console.log(text);
+  }
 
   return (
     <div className="App">
+      
       <Header />
       <BrowserRouter>
           <Routes>
-          <Route path='/' element={<SearchForm/>}/> 
+          <Route path='/' element={<SearchForm onClick={onClick} onSearch={onSearch}/>}/> 
           <Route path={'/Repo'} element={<RepoPage />}/> 
           </Routes>
       </BrowserRouter>
