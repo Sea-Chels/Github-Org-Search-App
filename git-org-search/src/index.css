@@ -68,14 +68,49 @@ background-color: var(--secCol)
   color:var(--mainNue)
 
 }
-#footer, #footer a {
+#footer, #footer a{
   text-decoration: none;
   text-align: center;
-  margin: 2%;
+  margin: 5%;
   color: var(--primCol);
+}
+#back-btn {
+  text-decoration: none;
+  color:var(--lite);
+  transform:translate(-500px, 20px);
+  position:absolute;
+  padding:15px;
+  background-color: var(--secCol);
+  border-bottom: 2px solid var(--mainNue);
 }
 #footer a:hover{
   color:var(--mainNue);
+}
+#repo-page img{
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 1000px;
+  margin-top:2%;
+}
+
+#repo-info-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--mainNue);
+  margin: 1% 20%;
+  border-radius: 10px;
+}
+.repo-card{
+  border: 5px solid rgb(53, 53, 53);
+  border-radius: 2px ;
+  transition: font-size .5s, color .5s;
+
+}
+
+.repo-card:hover{
+  font-size: 1.2em;
+  color: var(--tertCol);
 }
 
  @media screen and (max-width:768px){
@@ -83,5 +118,8 @@ background-color: var(--secCol)
     display: grid;
     grid-template-columns: 1fr;
     Margin: 0% 20%;}
+    #back-btn{
+      transform:translate(-300px, 20px);
+    }
 
  }

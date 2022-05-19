@@ -1,6 +1,7 @@
 import React from 'react'
 import ResultsSection from './ResultsSection'
 import {useState} from 'react'
+import Header from './Header'
 
 const SearchForm = ({results, onClick, onSearch}) => {
 
@@ -15,6 +16,8 @@ const SearchForm = ({results, onClick, onSearch}) => {
     setText('')
   }
   return (
+    <>
+    <Header />
     <div id="searchContainer">
         <form className="Search-Form" onSubmit={onSubmit}>
           <legend className="formLegend">Search</legend>
@@ -23,6 +26,7 @@ const SearchForm = ({results, onClick, onSearch}) => {
         </form>
         {/* {results.length > 0 ? <ResultsSection/> : ''} */}
     </div>
+    </>
   )
 }
 
