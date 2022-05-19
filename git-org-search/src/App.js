@@ -20,9 +20,23 @@ function App() {
   const onClick = (event, text) => {
     eventPrevent(event);
   }
-  const onSearch =(text)=> {
-    console.log(text);
+  // useEffect((text)=>{
+    
+  // })
+
+  // const fetchResults = async (text)=>{
+  //   const res = await fetch(`https://api.github.com/orgs/${text}/repos`);
+  //   const data = await res.json()
+  //   console.log(data)
+  // }
+
+  const onSearch = async (text)=> {
+    const res = await fetch(`https://api.github.com/orgs/${text.text}/repos`);
+    const data = await res.json()
+    console.log(data)
+    
   }
+
 
   return (
     <div className="App">

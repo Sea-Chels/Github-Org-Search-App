@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const BackToHome = () => {
   return (
     <>
-    <a href='/' id='back-btn'>Back to Home</a>
+    <a href='/' id='back-btn'> &#8678; Back to Home</a>
     </>
   )
 }

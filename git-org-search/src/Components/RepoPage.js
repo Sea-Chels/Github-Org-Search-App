@@ -6,10 +6,8 @@ import BackToHome from './BackToHome'
 const RepoPage = () => {
   return (
     <div id='repo-page'>
-      <div>
         <BackToHome />
-      </div>
-      <div>
+      <div id='repo-img-title'>
         <img src='https://avatars.githubusercontent.com/u/69631?v=4'/>
         <h1>facebook/hhvm</h1>
       </div>
