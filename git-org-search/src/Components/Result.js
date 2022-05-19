@@ -1,16 +1,14 @@
 import React from 'react'
-import RepoPage from './RepoPage';
-// import {
-//     Link
-//   } from "react-router-dom";
 
-const Result = ({key, repo, owner, url}) => {
+const Result = ({id, repo}) => {
+    
   return (
-      <>
-      <li> Repo by owner </li>
-      </>
+    <>
+    <li key={id}>{repo}</li>
+    </>
   )
 }
-// key={key}>{repo} By {owner}<Link to={<RepoPage url={url}/>}>Users</Link>
+//key={key} ><a href={`/Repo`}>{name}</a
+//can't get it to map, but it has no error message. Results has value. 
 
 export default Result

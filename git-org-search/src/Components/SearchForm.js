@@ -3,9 +3,10 @@ import ResultsSection from './ResultsSection'
 import {useState} from 'react'
 import Header from './Header'
 
-const SearchForm = ({results, onClick, onSearch}) => {
+const SearchForm = ({results, onSearch, httpStatusCode}) => {
 
   const [text, setText ] = useState('')
+
   const onSubmit = (e)=>{
     e.preventDefault()
     if(text === '' || undefined || null){
@@ -15,6 +16,7 @@ const SearchForm = ({results, onClick, onSearch}) => {
     onSearch({text})
     setText('')
   }
+
   return (
     <>
     <Header />
@@ -24,7 +26,7 @@ const SearchForm = ({results, onClick, onSearch}) => {
           <input className="orgInput" type="text" placeholder="Search Organizations" value={text} onChange={(e)=> setText(e.target.value)}></input>
           <input id="search" type="submit" value={`\u2315`}></input>
         </form>
-        {/* {results.length > 0 ? <ResultsSection/> : ''} */}
+        {results !== undefined ? <ResultsSection repo={results[0].owner.login} results={results} /> : ''}
     </div>
     </>
   )

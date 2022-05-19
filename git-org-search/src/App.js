@@ -1,7 +1,6 @@
 import './App.css';
-import Header from './Components/Header'
 import Footer from './Components/Footer'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {
   BrowserRouter,
   Routes,
@@ -14,28 +13,28 @@ import RepoPage from './Components/RepoPage'
 
 function App() {
 
+  const [results, setResults] = useState()
+
   const eventPrevent = (event) =>{
     event.preventDefault();
   }
   const onClick = (event, text) => {
     eventPrevent(event);
   }
-  // useEffect((text)=>{
-    
-  // })
+  const checkData = ()=>console.log(results);
 
-  // const fetchResults = async (text)=>{
-  //   const res = await fetch(`https://api.github.com/orgs/${text}/repos`);
-  //   const data = await res.json()
-  //   console.log(data)
-  // }
-
+  let response = '';
   const onSearch = async (text)=> {
     const res = await fetch(`https://api.github.com/orgs/${text.text}/repos`);
     const data = await res.json()
-    console.log(data)
-    
+
+    setResults(data);
+
+    checkData()
   }
+
+//need to pass info from clicking on repo list item to repo page, do I need the path? or can I just load it out??
+//pass results through search form and make the list show up - right nor results is showing as undefined right after setting the results? hopefully not the case later. 
 
 
   return (
@@ -43,7 +42,7 @@ function App() {
 
       <BrowserRouter>
           <Routes>
-          <Route path='/' element={<SearchForm onClick={onClick} onSearch={onSearch}/>}/> 
+          <Route path='/' element={<SearchForm onClick={onClick} onSearch={onSearch} results={results} response={response}/>}/> 
           <Route path={'/Repo'} element={<RepoPage />}/> 
           </Routes>
       </BrowserRouter>

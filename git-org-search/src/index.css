@@ -58,7 +58,6 @@ background-color: var(--secCol)
   list-style: none;
   text-align: center;
   background-color: var(--mainNue);
-  border: .5px solid var(--tertCol);
   border-radius: 25px;
   margin-bottom: 1%;
   padding: 2%;
@@ -67,6 +66,9 @@ background-color: var(--secCol)
   background-color: var(--primCol);
   color:var(--mainNue)
 
+}
+#showing-results{
+  color: var(--secCol)
 }
 #footer, #footer a{
   text-decoration: none;

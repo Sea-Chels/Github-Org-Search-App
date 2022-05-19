@@ -4,11 +4,13 @@ import BackToHome from './BackToHome'
 //have this only take in ID then fetch the info straight from id, then put into page here. 
 
 const RepoPage = () => {
+  
+
   return (
     <div id='repo-page'>
         <BackToHome />
       <div id='repo-img-title'>
-        <img src='https://avatars.githubusercontent.com/u/69631?v=4'/>
+        <img src='https://avatars.githubusercontent.com/u/69631?v=4' alt=''/>
         <h1>facebook/hhvm</h1>
       </div>
       <div id='repo-info-section'>
