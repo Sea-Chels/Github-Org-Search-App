@@ -12,14 +12,6 @@ body {
   --tertCol: rgb(255, 233, 33);
   --lite: white;
 }
-#searchContainer{
-  text-align: center;
-  background-color: var(--mainNue)!important;
-  padding:0% 0% 3% 0% ;
-  Margin: 2% 20% 1% 20% ;
-  border-radius: 5px;
-
-}
 #Header{
   color: var(--lite);
   text-align: center;
@@ -28,6 +20,14 @@ body {
   letter-spacing: .05em;
 }
 
+/* Form -------------- */
+#searchContainer{
+  text-align: center;
+  background-color: var(--mainNue)!important;
+  padding:0% 0% 3% 0% ;
+  Margin: 2% 20% 1% 20% ;
+  border-radius: 5px;
+}
 .formLegend{
   font-size: 300%;
   padding:1%;
@@ -49,12 +49,18 @@ body {
 color:var(--lite);
 background-color: var(--secCol)
 }
-
+/* Results ------------------------- */
 #resultsContainer{
   margin: 0% 20%;
 }
+#repoList a{
+text-decoration: none;
+font-family: 'Cairo', sans-serif;
+color: var(--lite);
+font-size:1.1em;
+}
 
-#repoList, li{
+#repoList li{
   list-style: none;
   text-align: center;
   background-color: var(--mainNue);
@@ -65,17 +71,12 @@ background-color: var(--secCol)
 #repoList li:hover{
   background-color: var(--primCol);
   color:var(--mainNue)
-
 }
 #showing-results{
   color: var(--secCol)
 }
-#footer, #footer a{
-  text-decoration: none;
-  text-align: center;
-  margin: 5%;
-  color: var(--primCol);
-}
+
+/* repo page ------------------- */
 #back-btn {
   text-decoration: none;
   color:var(--lite);
@@ -90,15 +91,21 @@ background-color: var(--secCol)
 #back-btn:hover{
   background-color: var(--mainNue);
 }
-#footer a:hover{
-  color:var(--mainNue);
-}
 #repo-page img{
   max-width: 200px;
   max-height: 200px;
   overflow: hidden;
   border-radius: 1000px;
   margin-top:2%;
+}
+#repo-page a{
+  text-decoration: none;
+  font-family: 'Cairo', sans-serif;
+  color: var(--lite);
+  transition: color .5s;
+}
+#repo-page a:hover{
+  color: var(--tertCol);
 }
 
 #repo-info-section{
@@ -114,10 +121,19 @@ background-color: var(--secCol)
   transition: font-size .5s, color .5s;
 
 }
-
 .repo-card:hover{
   font-size: 1.2em;
   color: var(--tertCol);
+}
+/* footer ---------------- */
+#footer, #footer a{
+  text-decoration: none;
+  text-align: center;
+  margin: 5%;
+  color: var(--primCol);
+}
+#footer a:hover{
+  color:var(--mainNue);
 }
 
  @media screen and (max-width:768px){

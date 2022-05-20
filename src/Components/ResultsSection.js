@@ -1,7 +1,7 @@
 import React from 'react'
 import Result from './Result'
 
-const ResultsSection = ({repo, results}) => {
+const ResultsSection = ({repo, results, repoClick}) => {
 
 
   return (    
@@ -9,7 +9,7 @@ const ResultsSection = ({repo, results}) => {
       <p id="showing-results">Showing results for {repo}...</p>
       <ul id="repoList"> 
       {results.map((result)=>{
-        return <Result key={result.id} repo={result.full_name} />;
+        return <Result key={result.id} repo={result.full_name} repoClick={repoClick}/>;
     })}
 
       </ul>

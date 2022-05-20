@@ -6,4 +6,5 @@ const Error = () => {
   )
 }
 
+//wanted to get this working, but I didn't have time. 
 export default Error
