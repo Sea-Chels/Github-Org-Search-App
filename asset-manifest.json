@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Github-Org-Search-App/static/css/main.ed35d18a.css",
+    "main.js": "/Github-Org-Search-App/static/js/main.88c9225a.js",
+    "index.html": "/Github-Org-Search-App/index.html",
+    "main.ed35d18a.css.map": "/Github-Org-Search-App/static/css/main.ed35d18a.css.map",
+    "main.88c9225a.js.map": "/Github-Org-Search-App/static/js/main.88c9225a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed35d18a.css",
+    "static/js/main.88c9225a.js"
+  ]
+}
